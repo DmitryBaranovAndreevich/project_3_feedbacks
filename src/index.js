@@ -1,3 +1,4 @@
+import './styles/index.css';
 function getTimeStamp() {
   let today = new Date(); //fetch today's date and store it in variable
 
