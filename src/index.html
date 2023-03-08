@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="shortcut icon" type="image/png" href="./www.png" />
-    <!--shortcut icon downloaded from: https://uxwing.com/www-icon/ -->
-    <title>My Document</title>
-  </head>
 
-  <body>
-    <div id="bodyDiv">
-      <div id="headerDiv">
-        <header>
-          <h1>This is h1 styled title</h1>
-        </header>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="./www.png" />
+  <title>Отзывы</title>
+</head>
 
-      <div id="mainDiv">
-        <main>
-          <div>
-            <p>This is paragraph element of document</p>
+<body>
+  <div class="bodyDiv">
+    <div class="headerDiv">
+      <header>
+        <div class="headerDiv__container">
+          <img class="headerDiv__logo" src="<%=require('./images/wildberris.png')%>" alt="Logo">
+          <div class="headerDiv__inputContainer">
+            <input class="headerDiv__input" type="text">
           </div>
-        </main>
-      </div>
-
-      <div id="footerDiv">
-        <footer id="pageFooter">This is footer element of document</footer>
-      </div>
+          <ul class="headerDiv__list">
+            <li class="headerDiv__elem headerDiv__elem_adresse">Адреса</li>
+            <li class="headerDiv__elem headerDiv__elem_delivery">Доставка</li>
+            <li class="headerDiv__elem headerDiv__elem_profile">Профиль</li>
+            <li class="headerDiv__elem headerDiv__elem_cart">Корзина</li>
+          </ul>
+        </div>
+      </header>
     </div>
 
-    <script src="scripts/index.js"></script>
-  </body>
+    <div class="mainDiv">
+      <main>
+        <section class="feedbacks">
+          <div class="feedbacks__container">
+            <h2 class="feedbacks__title">Отзывы</h2>
+            <button class="feedbacks__button" type="button">Оставить отзыв</button>
+          </div>
+          <div class="feedbacks__list">
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="footerDiv">
+      <footer class="pageFooter"></footer>
+    </div>
+  </div>
+  <div class="overlay">
+    <form class="form feedbackForm" novalidate>
+      <button type="button" class="form__closeButton"></button>
+      <h3 class="feedbackForm__title">Оставьте ваш отзыв</h3>
+      <p class="feedbackForm__subTitle">это позволит улучшить качество обслуживания</p>
+      <p class="feedbackForm__smallTitle">Оцените ваш товар</p>
+      <div class="feedback__sliderContainer">
+        <p class="slider__minValue">0</p>
+        <input type="range" class="input slider slider-progress" step="0.1" value="2.5" min="0" max="5" name="rating">
+        <p class="slider__maxValue">5</p>
+      </div>
+      <p class="feedbackForm__smallTitle">Ваше имя</p>
+      <input type="text" class="input feedbackForm__inputEl feedbackForm__nameInput" minlength="4" required name="name">
+      <p class="feedbackForm__name_error feedbackForm__errorMessage">Минимальная длинна 4 символа</p>
+      <p class="feedbackForm__smallTitle">Ваше отзыв</p>
+      <textarea rows="5" cols="40" class="input  feedbackForm__inputEl feedbackForm__textInput" minlength="10" maxlength="100" required name="text"></textarea>
+      <p class="feedbackForm__text_error feedbackForm__errorMessage">Минимальная длинна 10 символов</p>
+      <p class="feedbackForm__smallTitle">Выберете дату</p>
+      <input type="date" class="input  feedbackForm__inputEl feedbackForm__date" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" name="date">
+      <p class="feedbackForm__date_error feedbackForm__errorMessage">Неверный формат даты</p>
+      <button type="submit" class="feedbackForm__submitButton">Отправить отзыв</button>
+    </form>
+  </div>
+
+</body>
+
 </html>

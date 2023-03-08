@@ -1,0 +1,91 @@
+.feedbackForm {
+  max-width: 700px;
+  position: relative;
+  width: 100%;
+  padding: 20px 20px;
+  background: #ffffff;
+  border-radius: 40px;
+  flex-direction: column;
+
+  &__title,
+  &__subTitle {
+    margin: 0;
+  }
+
+  &__title {
+    font: 24px/32px 'Roboto', 'Arial', sans-serif;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__subTitle {
+    font: 12px/18px 'Roboto', 'Arial', sans-serif;
+    font-weight: medium;
+    margin: 0 0 30px 0;
+  }
+
+  &__smallTitle {
+    font: 18px/24px 'Roboto', 'Arial', sans-serif;
+    font-weight: medium;
+    margin: 0 0 10px 0;
+    text-align: start;
+  }
+
+  &__inputEl {
+    max-width: 280px;
+    box-sizing: border-box;
+    max-width: 280px;
+    padding: 5px 15px;
+    border: 1px solid #d3d4dd;
+    border-radius: 6px;
+    font: 12px/18px 'Roboto', 'Arial', sans-serif;
+    font-weight: medium;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #cb11ab;
+    }
+  }
+
+  &__input_type_error {
+    border-bottom: 2px solid red;
+  }
+
+  &__textInput {
+    resize: none;
+  }
+
+  &__date {
+    cursor: pointer;
+  }
+
+  &__submitButton {
+    max-width: 350px;
+    padding: 5px 50px;
+    border: 1px solid #cb11ab;
+    background: #ffffff;
+    border-radius: 6px;
+    font: 18px/32px 'Roboto', 'Arial', sans-serif;
+    font-weight: medium;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__errorMessage {
+    margin: 5px 0 25px;
+    text-align: start;
+    color: lightcoral;
+    opacity: 0;
+  }
+
+  &__name_error_active,
+  &__text_error_active,
+  &__date_error_active {
+    opacity: 1;
+  }
+}

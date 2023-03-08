@@ -1,0 +1,99 @@
+.feedback {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  border-top: 1px solid #e7e3e3;
+  padding: 10px;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e7e3e3;
+  }
+
+  &__container {
+    width: 100%;
+    text-align: start;
+  }
+
+  &__image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+
+  &__rating {
+    text-align: start;
+    display: flex;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+    background: url("../images/icons8-рождественская-звезда-24-1.png") no-repeat center/cover;
+  }
+
+  &__titleContainer {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__title,
+  &__time {
+    margin: 0;
+  }
+
+  &__title {
+    font: 16px/24px 'Roboto', 'Arial', sans-serif;
+    font-weight: bold;
+  }
+
+  &__time {
+    font: 16px/24px 'Roboto', 'Arial', sans-serif;
+    font-weight: medium;
+    color: rgba(#000000, .6);
+  }
+
+  &__deleteButton {
+    width: 20px;
+    height: 20px;
+    background: url("../images/delete.svg") no-repeat center/cover;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__body {
+    text-align: start;
+    font: 16px/24px 'Roboto', 'Arial', sans-serif;
+    font-weight: regular;
+  }
+
+  &__like {
+    width: 30px;
+    height: 25px;
+    border: none;
+    background: url("../images/like-icon_inactive.svg") no-repeat center/contain;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &_active {
+      background-image: url("../images/like-icon_active.svg");
+    }
+  }
+
+  &__sliderContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}

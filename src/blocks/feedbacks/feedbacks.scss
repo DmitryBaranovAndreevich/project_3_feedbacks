@@ -1,0 +1,26 @@
+.feedbacks {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font: 24px/32px 'Roboto', 'Arial', sans-serif;
+    margin: 0;
+  }
+
+  &__button {
+    color: #cb11ab;
+    border: 2px solid #cb11ab;
+    background: #ffffff;
+    border-radius: 20px;
+    font: 16px/24px 'Roboto', 'Arial', sans-serif;
+    padding: 10px 70px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
